@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Atividade Prática de DevOps: Conteinerização com Docker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositório contém um projeto prático desenvolvido para a disciplina de DevOps. 
 
-## Available Scripts
+O foco deste trabalho não foi o desenvolvimento do código-fonte, mas sim a criação da **infraestrutura** necessária para rodar a aplicação. O sistema base (desenvolvido em Java) foi fornecido pelo professor, e o meu objetivo foi aplicar os conceitos de DevOps para "empacotar" esse sistema usando Docker.
 
-In the project directory, you can run:
+## O que eu fiz neste projeto:
+* **Criação do `Dockerfile`:** Escrevi as instruções passo a passo para montar o ambiente do zero.
+* **Conteinerização:** Gerei a imagem da aplicação, garantindo que ela tenha tudo o que precisa (dependências, versão correta do Java, etc) para rodar isolada da máquina local.
+* **Versionamento:** Subi a estrutura completa para o GitHub usando comandos do Git.
 
-### `npm start`
+## Tecnologias Envolvidas
+* **Docker:** Para a criação da imagem e do container.
+* **Java:** Linguagem base da aplicação fornecida.
+* **Git e GitHub:** Para versionamento e documentação do repositório.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Como testar a infraestrutura
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para rodar este container na sua máquina, você só precisa ter o [Docker](https://www.docker.com/) instalado. Não é necessário instalar o Java nem configurar variáveis de ambiente localmente.
 
-### `npm test`
+**1. Clone o repositório:**
+`git clone https://github.com/rafael7opes/DevOpsUninter.git`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**2. Entre na pasta:**
+`cd DevOpsUninter`
 
-### `npm run build`
+**3. Construa a imagem Docker:**
+`docker build -t app-java-devops .`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**4. Execute o container:**
+`docker run -p 8080:8080 app-java-devops`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*(Nota: a porta pode variar dependendo da configuração original da aplicação).*
