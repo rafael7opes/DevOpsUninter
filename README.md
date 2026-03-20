@@ -2,7 +2,7 @@
 
 Este repositório contém um projeto prático desenvolvido para a disciplina de DevOps. 
 
-O foco deste trabalho não foi o desenvolvimento do código-fonte, mas sim a criação da **infraestrutura** necessária para rodar a aplicação. O sistema base (desenvolvido em React/Node.js) foi fornecido pelo professor, e o meu objetivo foi aplicar os conceitos de DevOps para "empacotar" esse sistema usando Docker.
+O foco deste trabalho não foi o desenvolvimento do código-fonte, mas sim a criação da **infraestrutura** necessária para rodar a aplicação. O sistema base (desenvolvido em Java) foi fornecido pelo professor, e o meu objetivo foi aplicar os conceitos de DevOps para 'empacotar' esse sistema usando Docker.
 
 ## O que eu fiz neste projeto:
 * **Criação do `Dockerfile`:** Escrevi as instruções passo a passo para montar o ambiente do zero.
